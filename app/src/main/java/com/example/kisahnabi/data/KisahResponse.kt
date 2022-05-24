@@ -4,15 +4,10 @@ import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 import kotlinx.parcelize.Parcelize
 
+
+
 @Parcelize
 data class KisahResponse(
-
-	@field:SerializedName("KisahResponse")
-	val kisahResponse: List<KisahResponseItem?>? = null
-) : Parcelable
-
-@Parcelize
-data class KisahResponseItem(
 
 	@field:SerializedName("usia")
 	val usia: String? = null,
