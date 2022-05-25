@@ -17,6 +17,9 @@ class DetailActivity : AppCompatActivity() {
     private var _binding : ActivityDetailBinding? = null
     private val binding get() = _binding as ActivityDetailBinding
 
+    companion object{
+        const val EXTRA_DATA = "data"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,19 +28,19 @@ class DetailActivity : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        val kisah = intent.getParcelableExtra<KisahResponse>(EXTRA_DATA) as KisahResponse
+        val kisah = intent.getParcelableExtra<KisahResponse>(EXTRA_DATA)
 
-        binding.apply {
-            detailName.text = kisah.name
-            detailDesk.text = kisah.description
-            detailTahun.text = kisah.thnKelahiran
-            detailTempat.text = kisah.tmp
-            detailUsia.text = kisah.usia
-            Glide.with(this@DetailActivity).load(kisah.imageUrl).into(detailImage)
+        kisah?.let {
+            binding.apply {
+                detailName.text = kisah.name
+                detailDesk.text = kisah.description
+                detailTahun.text = kisah.thnKelahiran
+                detailTempat.text = kisah.tmp
+                detailUsia.text = kisah.usia
+                Glide.with(this@DetailActivity).load(kisah.imageUrl).into(detailImage)
+            }
         }
+
     }
 
-    companion object{
-        const val EXTRA_DATA = "data"
-    }
 }

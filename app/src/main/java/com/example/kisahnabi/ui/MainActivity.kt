@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
                         Intent(
                             applicationContext,
                             DetailActivity::class.java
-                        ).putExtra("name", item)
+                        ).putExtra(DetailActivity.EXTRA_DATA, item)
                     )
                 }
             })
