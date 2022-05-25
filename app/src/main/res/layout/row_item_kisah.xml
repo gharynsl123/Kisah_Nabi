@@ -18,8 +18,8 @@
         <ImageView
             android:id="@+id/item_img"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:scaleType="centerCrop"
+            android:layout_height="120dp"
+            android:scaleType="fitXY"
             android:src="@drawable/ic_launcher_background"
             app:layout_constraintTop_toTopOf="parent" />
 

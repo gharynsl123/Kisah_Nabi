@@ -40,7 +40,9 @@ class DetailActivity : AppCompatActivity() {
                 Glide.with(this@DetailActivity).load(kisah.imageUrl).into(detailImage)
             }
         }
-
     }
-
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return super.onSupportNavigateUp()
+    }
 }

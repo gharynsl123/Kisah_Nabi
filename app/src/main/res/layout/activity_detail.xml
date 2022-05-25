@@ -16,15 +16,15 @@
         <ImageView
             android:id="@+id/detail_image"
             android:layout_width="match_parent"
-            android:layout_height="350dp"
+            android:layout_height="250dp"
             android:adjustViewBounds="true"
-            android:scaleType="centerCrop"
+            android:scaleType="fitXY"
             android:src="@drawable/ic_launcher_background" />
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="280dp"
+            android:layout_marginTop="200dp"
             app:cardCornerRadius="20dp">
 
             <LinearLayout
